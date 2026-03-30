@@ -1,3 +1,5 @@
+DROP TYPE IF EXISTS project_status CASCADE;
+DROP TYPE IF EXISTS contract_status CASCADE;
 -- Створюємо тип для статусів проєкту
 CREATE TYPE project_status AS ENUM (
     'open', 
@@ -12,8 +14,6 @@ CREATE TYPE contract_status AS ENUM (
     'completed', 
     'failed'
 );
-DROP TYPE IF EXISTS project_status CASCADE;
-DROP TYPE IF EXISTS contract_status CASCADE;
 
 -- 1. Клієнти
 CREATE TABLE IF NOT EXISTS clients (
